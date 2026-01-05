@@ -51,8 +51,8 @@ class LayerNorm(nn.Module):
         super().__init__()
         self.feature_dim = feature_dim
         self.eps = eps
-        self.gamma = nn.Parameter(torch.ones(1, 1, feature_dim))
-        self.beta = nn.Parameter(torch.zeros(1, 1, feature_dim))
+        self.gamma = nn.Parameter(torch.ones(feature_dim))
+        self.beta = nn.Parameter(torch.zeros(feature_dim))
 
     def forward(self, x):
         var, mu = torch.var_mean(x, dim=-1, keepdim=True) 

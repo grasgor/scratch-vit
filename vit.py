@@ -26,17 +26,13 @@ class ViT(nn.Module):
 
 if __name__ == "__main__":
     config = ViTConfig()
-
     model = ViT(config)
 
-    # Create a dummy input: batch_size=2, 3 channels, 224x224
     x = torch.randn(2, 3, 224, 224)
 
-    # Forward pass
     logits = model(x)
     print("Forward pass successful.")
-    print("Output shape:", logits.shape)  # Expected: [2, 1000]
+    print("Output shape:", logits.shape)
 
-    # Optional: check total number of parameters
     total_params = sum(p.numel() for p in model.parameters())
     print(f"Total parameters: {total_params/1e6:.2f}M")
