@@ -36,10 +36,16 @@ Top-5 predictions:
 4. Australian Silky Terrier: 0.18%
 5. Griffon Bruxellois: 0.18%
 ```
+<div style="text-align: center;">
+  <img src="./src/vit_paper_metrics.png" alt="Alt Text">
+  <p>Plots proving that attention similarity bias does exist</p>
+</div>
+
 
 ## TODO
 
 - [x] Implement ViT-B/16 and load pretrained weights  
+- [ ] Compare with XSA of ViT-B/16. Can a LoRA do it as well?
 - [ ] Training scripts for pretraining a custom ViT  
 - [ ] Implement ViT-MAE  
 - [ ] Train ViT for the ARC-AGI task  
